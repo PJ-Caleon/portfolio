@@ -3,7 +3,9 @@ import TextField from '../components/TextField';
 function Contact() {
     return (
         <div className="page" id="contact">
-            <h2>Contact</h2>
+            <h2>Here are my Socials</h2>
+
+            <p>Feel free to contact me!</p>
 
             <div className="contact-grid">
                 <div className="contact-left">

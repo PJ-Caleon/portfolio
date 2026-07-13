@@ -15,6 +15,12 @@ function TextField() {
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
+    console.log('Service ID:', serviceID);
+    console.log('Template ID:', templateID);
+    console.log('Public Key:', publicKey);
+
+    emailjs.init(publicKey);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -26,8 +32,6 @@ function TextField() {
         e.preventDefault();
         setIsSending(true);
         setStatus('');
-
-        emailjs.init(publicKey);
 
         emailjs.send(serviceID, templateID, formData, publicKey)
             .then((response) => {
