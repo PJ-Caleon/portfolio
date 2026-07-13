@@ -1,0 +1,408 @@
+/* ========= Rose Pine Theme ========== */
+:root {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --highlight-low: #21202e;
+  --highlight-med: #403d52;
+  --highlight-high: #524f67;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--base);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  border-bottom: var(--pine);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.5%;         
+  height: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--foam);
+  border: 2px solid var(--highlight-med);
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.nav-logo:hover {
+  border-color: var(--foam);
+  color: var(--text);
+  transform: scale(1.05);
+}
+
+.nav-logo.active {
+  border-color: var(--foam);
+  background: rgba(156, 207, 216, 0.1);
+  box-shadow: 0 0 20px rgba(156, 207, 216, 0.15);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  .nav-link {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.8rem;
+  }
+}
+
+.nav-link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid var(--highlight-med);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: var(--surface);
+  color: var(--text);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--highlight-med);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.nav-link:hover {
+  border-color: var(--text);
+  color: var(--text);
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  border-color: var(--foam);
+  color: var(--foam);
+  background: rgba(156, 207, 216, 0.1);
+  box-shadow: 0 0 20px rgba(156, 207, 216, 0.15);
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(156, 207, 216, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(156, 207, 216, 0.25);
+  }
+}
+
+/* ========== PAGE STYLES ========== */
+.page h1 {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--pine), var(--foam));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--pine), var(--foam));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page p {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ========== BUTTON GRID ========== */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: var(--highlight-low);
+  color: var(--text);
+  border: 1px solid var(--highlight-med);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  max-width: 20%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--highlight-med);
+  border-color: var(--highlight-high);
+  transform: scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* ========== CONTACT BUTTON ========== */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.contact-buttons .btn {
+  padding: 0.8rem 2rem;
+  flex: 0 1 auto;
+  white-space: nowrap;
+  min-width: fit-content;
+  width: auto;
+}
+
+/* On small screens, stack vertically */
+@media (max-width: 400px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+/* ========== BUTTON VARIANTS ========== */
+.btn-primary {
+    background: linear-gradient(135deg, var(--pine), var(--foam));
+    border: none;
+    color: var(--base);
+    max-width: 100%;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--rose), var(--love));
+    box-shadow: 0 0 30px rgba(156, 207, 216, 0.3);
+}
+
+.btn-secondary {
+    background: var(--highlight-low);
+    border: 1px solid var(--highlight-med);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background: var(--highlight-med);
+    border-color: var(--foam);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--love);
+    color: var(--foam);
+}
+
+.btn-outline:hover {
+    background: rgba(156, 207, 216, 0.1);
+    border-color: var(--text);
+    color: var(--text);
+}
+
+/* ========== BUTTON SIZES ========== */
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.btn-medium {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+/* ========== DISABLED BUTTON ========== */
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ========== TYPING TEXT ========== */
+.typing-container {
+  font-size: 2.5rem;
+  line-height: 1.8;
+  min-height: 100px;
+  padding: 1rem;
+  margin: 0 0;
+}
+
+.typing-text {
+  color: var(--love);
+}
+
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.typing-note {
+  color: var(--love);
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.typing-container.narrow {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ========== Scrolling Snap ========== */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.page {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  flex: 1;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ========== Text Placeholder ========== */
+.text-placeholder p {
+  font-size: inherit;
+}
