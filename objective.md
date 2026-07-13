@@ -24,7 +24,7 @@
 - Current desktop (CachyOS + Niri)
 - terminal fastfetch
 - Yazi manager
-- Video/ Gif walkthrough
+- Video/ Gif walkthrough => DE > open terminal > open terminal then yazi > open a pdf with yazi > close browser > open browser > do switching windows 
 
 ## Skills
 - Soft skills

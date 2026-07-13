@@ -4,6 +4,8 @@ import cachy_DE from '../images/cachyOS_DE.png';
 import cachy_ff from '../images/fastfetch_cachyOS.png';
 import TextPlaceholder from '../components/TextPlaceholder';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import myGif from '../images/turnGIF.gif';
+import GifPlaceholder from '../components/GifPlaceholder';
 
 function Linux() {
     return (
@@ -132,6 +134,15 @@ function Linux() {
                     position="right"
                 />
             </div>
+            <GifPlaceholder
+              src = {myGif}
+              alt="Demo Animation"
+              width="100%"
+              height="auto"
+              borderColor="var(--love)"
+              padding="10px"
+              position="center"  
+            />
         </div>
     );
 }

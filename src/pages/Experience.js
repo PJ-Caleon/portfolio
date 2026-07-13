@@ -27,7 +27,7 @@ function Experience() {
                     { label: "Documentation", desc: "Authored comprehensive technical documentation for NXP board setup, pin configuration, and codebase to support future interns." }
                 ]}
                 borderColor="var(--love)"
-                fontSize="1.3rem"
+                fontSize="1rem"
             />
         </div>
     );
