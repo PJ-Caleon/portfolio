@@ -5,20 +5,27 @@ function Home() {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const navbarHeight = 50;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
-    <div className="page" id = "home">
-      <h1 style={{ textAlign: 'center', paddingRight: '20%'}}>Hi, I'm PJ.</h1>
+    <div className="page" id="home">
+      <h1 style={{ textAlign: 'center', paddingRight: '20%' }}>Hi, I'm PJ.</h1>
 
-      <div className ="typing-container narrow">
-        <div style ={{ paddingLeft: '40%'}}>
+      <div className="typing-container narrow">
+        <div style={{ paddingLeft: '40%' }}>
           <TypingText
             text={headline}
             speed={50}
-            delay = {1000}
+            delay={1000}
           />
         </div>
       </div>
