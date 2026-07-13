@@ -29,9 +29,6 @@ function TextField() {
         setIsSending(true);
         setStatus('');
 
-        // Delete later
-        console.log('Sending with:', { serviceID, templateID, formData });
-
         emailjs.send(serviceID, templateID, formData)
             .then((response) => {
                 setStatus('Message sent successfully!');
