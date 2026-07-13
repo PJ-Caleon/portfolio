@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <div className="page" id = "home">
-      <h1 style={{ textAlign: 'center', paddingRight: '20%'}}>Hi, I'm PJ.</h1>
+      <h1 style={{ textAlign: 'center', paddingRight: '20%'}}>Hi, I'm PJ on the Phone.</h1>
 
       <div className ="typing-container narrow">
         <div style ={{ paddingLeft: '40%'}}>
