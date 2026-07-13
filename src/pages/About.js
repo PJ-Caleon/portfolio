@@ -1,6 +1,6 @@
 import TextPlaceholder from '../components/TextPlaceholder';
 import ImagePlaceholder from '../components/ImagePlaceholder';
-import image from '../images/test.jpg';
+import image from '../images/profile.png';
 import Button from '../components/Button';
 import resume from '../philipjeremiahcaleon-resume.pdf';
 
@@ -21,7 +21,7 @@ function About() {
         <ImagePlaceholder
           src={image}
           alt="Linux"
-          width="50%"
+          width="25%"
           height="auto"
           padding="5px"
           position="left"

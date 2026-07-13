@@ -406,3 +406,54 @@ body {
 .text-placeholder p {
   font-size: inherit;
 }
+
+/* ========== EXPERIENCE CARD ========== */
+.experience-card {
+    background: var(--highlight-low);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--love);
+    margin-bottom: 1.5rem;
+}
+
+.experience-card .contributions-title {
+    color: var(--foam);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.experience-card .contribution-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.experience-card .contribution-item:not(:last-child) {
+    border-bottom: 1px solid var(--foam);
+}
+
+.experience-card .contribution-label {
+    font-weight: bold;
+    min-width: 180px;
+    color: var(--text);
+    flex-shrink: 0;
+    padding-right: 1rem
+}
+
+.experience-card .contribution-desc {
+    color: var(--text);
+    margin-left: 0;
+}
+
+@media (max-width: 600px) {
+    .experience-card .contribution-item {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .experience-card .contribution-label {
+        min-width: auto;
+    }
+}
