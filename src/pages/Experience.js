@@ -12,7 +12,7 @@ function Experience() {
                 textAlign="left"
                 fontSize="1.5rem"
             >
-                <h3>Dyson Electronics PTE Ltd - Philippine Branch</h3>
+                <h4>Dyson Electronics PTE Ltd - Philippine Branch</h4>
                 <p>May 2025 - August 2025 | First Philippine Industrial Park II, Santo Tomas, Batangas</p>
                 <p>I joined Dyson's Embedded Software (ESW) team as an intern, working on real-time embedded systems for Dyson's consumer products. The internship was project-based and team-driven, I wasn't just observing; I was writing code, debugging hardware, and delivering features alongside other interns under the guidance of senior engineers.</p>
             </TextPlaceholder>
