@@ -19,6 +19,12 @@
 
 ## Linux Setup
 - Showcase linux
+- Debian OS screenshot DE
+- Arch OS screenshot of fastfetch
+- Current desktop (CachyOS + Niri)
+- terminal fastfetch
+- Yazi manager
+- Video/ Gif walkthrough
 
 ## Skills
 - Soft skills
