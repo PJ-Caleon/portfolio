@@ -622,10 +622,6 @@ body {
     font-size: 1rem;
   }
 
-  .image-placeholder {
-    max-height: 180px;
-  }
-
   .page,
   .page *,
   .text-placeholder,

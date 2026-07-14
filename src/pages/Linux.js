@@ -91,6 +91,7 @@ function Linux() {
                     height="auto"
                     padding="5px"
                     position="right"
+                    objectFit='contain'
                 />
 
                 <TextPlaceholder

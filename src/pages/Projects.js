@@ -1,6 +1,11 @@
-import image from '../images/test.jpg';
 import TextPlaceholder from '../components/TextPlaceholder';
 import ImagePlaceholder from '../components/ImagePlaceholder';
+import thesis1 from '../images/thesis1.png';
+import thesis2 from '../images/thesis2.png';
+import avr from '../images/avr.png';
+import face_track from '../images/facetrack.png';
+import segment from '../images/segment.png';
+import raspberry from '../images/raspberry.png';
 
 function Projects() {
     return (
@@ -43,7 +48,7 @@ function Projects() {
                 </TextPlaceholder>
 
                 <ImagePlaceholder
-                    src={image}
+                    src={thesis1}
                     alt="Linux"
                     width="75%"
                     height="auto"
@@ -94,7 +99,7 @@ function Projects() {
                 </TextPlaceholder>
 
                 <ImagePlaceholder
-                    src={image}
+                    src={thesis2}
                     alt="Linux"
                     width="75%"
                     height="auto"
@@ -256,7 +261,7 @@ function Projects() {
                 marginBottom: "1.5rem"
             }}>
                 <ImagePlaceholder
-                    src={image}
+                    src={raspberry}
                     alt="Linux"
                     width="75%"
                     height="auto"
@@ -278,6 +283,15 @@ function Projects() {
                         comparing facial features, cv2 for video and image processing, and pickle for
                         model serialization and saving face encodings.
                     </p>
+
+                    <a
+                        href="https://drive.google.com/file/d/1rPijmjOlYybJN0cguQI0EFxODxBB9zeV/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline-link"
+                    >
+                        View Research Paper
+                    </a>
                 </TextPlaceholder>
             </div>
 
@@ -308,10 +322,19 @@ function Projects() {
                         the counter. Greed LED on indicates the count down. A red LED indicates the
                         pause. Lastly a blue LED indicates the timer has reached 0.
                     </p>
+
+                    <a
+                        href="https://github.com/PJ-Caleon/DOWN-COUNTER-WITH-7-SEGMENT-DISPLAY"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline-link"
+                    >
+                        View Github Repo
+                    </a>
                 </TextPlaceholder>
 
                 <ImagePlaceholder
-                    src={image}
+                    src={segment}
                     alt="Linux"
                     width="75%"
                     height="auto"
@@ -334,7 +357,7 @@ function Projects() {
                 marginBottom: "1.5rem"
             }}>
                 <ImagePlaceholder
-                    src={image}
+                    src={avr}
                     alt="Linux"
                     width="75%"
                     height="auto"
@@ -352,6 +375,15 @@ function Projects() {
                         well as learning how to use EEPROM read and write function to allow the
                         system to remember a state even after the system is turned off.
                     </p>
+
+                    <a
+                        href="https://github.com/PJ-Caleon/Basic-Password-Lock"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline-link"
+                    >
+                        View Github Repo
+                    </a>
                 </TextPlaceholder>
             </div>
 
@@ -382,10 +414,19 @@ function Projects() {
                         tracking designs with actuators reacting to certain situations of what the camera
                         could detect.
                     </p>
+
+                    <a
+                        href="https://github.com/PJ-Caleon/Face-Tracker"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline-link"
+                    >
+                        View Github Repo
+                    </a>
                 </TextPlaceholder>
 
                 <ImagePlaceholder
-                    src={image}
+                    src={face_track}
                     alt="Linux"
                     width="75%"
                     height="auto"

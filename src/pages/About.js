@@ -25,6 +25,7 @@ function About() {
           height="auto"
           padding="5px"
           position="left"
+          objectFit='contain'
         />
 
         <TextPlaceholder
