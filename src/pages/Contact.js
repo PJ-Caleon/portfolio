@@ -11,7 +11,7 @@ function Contact() {
                 <div className="contact-left">
                     <div className="contact-buttons">
                         <a
-                            href="https://linkedin.com/in/pj-caleon"
+                            href="https://www.linkedin.com/in/philip-jeremiah-caleon-1990802ba/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn"
